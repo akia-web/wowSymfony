@@ -1,0 +1,148 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FicheController!{% endblock %}
+
+{% block body %}
+<nav>
+<div class="bouton" id="personnage">
+<button onclick="buttonAkiaYsondreMoine()">Akia</button>
+<button onclick="buttonAkiaYsondreChassou()">Akiæ</button>
+</div>
+</nav>
+       
+       
+<div class="menu">
+<ul>
+    <a href="#personnage"><li>personnages</li></a>
+  
+    <a href="#page2"><li>réputations</li></a>
+    
+</ul>
+</div>
+<div class="habillage">
+    <div id="page1">
+    <div class="titre">
+        <h1>Résumé du personnage</h1>
+      </div>
+            <div class="container">
+                <div id="presentation"></div>
+            </div>
+  </div> <!--fin page1 -->
+ 
+    <div id="page2">
+    <div class="titre">
+        <h2>Réputations</h2>
+        </div>
+        <div id="reputations">
+        <div class="reputation"> 
+        <!--réputation BFA-->
+            <details open>
+                <summary>Battle for Azeroth</summary>
+                <div id="bfa"></div>
+            </details>
+        
+        <!--réputation legion-->
+            <details>
+                <summary>Légion</summary>
+                <div id="legion"></div>
+            </details>
+            
+        <!--réputation draenor-->
+            <details>
+                <summary>Warlords of Draenor</summary>
+                <div id="draenor"></div>
+            </details>
+            
+        <!--réputation pandarie-->
+            <details>
+                <summary>Mists of Pandaria</summary>
+                <div id="pandarie"></div>
+            </details>
+            
+        <!--réputation Cataclysme-->
+            <details>
+                <summary>Cataclysm</summary>
+                <div id="cataclysme"></div>
+            </details>
+                            
+            
+        <!--réputation lich king-->
+            <details>
+                <summary>Wrath of the Lich King</summary>
+                <div id="lich"></div>
+                <details>
+                    <summary style="margin-left: 20px" >Expédition de la Horde</summary>
+                    <div id="expeHorde"></div>
+                </details>
+            </details>
+            
+            
+            
+        <!--réputation burning crusade-->
+            <details>
+                <summary>The Burning Crusade</summary>
+                <div id="burning"></div>
+                <details>
+                    <summary style="margin-left: 20px" >Shattrath</summary>
+                    <div id="shattrath"></div>
+                </details>
+            </details>
+            
+            
+            
+        <!--réputations classique-->       
+            <details >
+                <summary >Classique</summary>
+                    <div id="classic"></div>
+                <details open>
+                    <summary style="margin-left: 20px">Cartel Gentepression</summary>
+                    <div id="cartel"></div>
+                        <details open>
+                            <summary style="margin-left: 20px">Horde</summary>
+                            <div id="horde"></div>
+                        </details>
+                
+                </details>
+            </details>
+            
+            <details>
+                <summary>autre</summary>
+                <div id="autre"></div>
+            </details>
+                
+        </div>
+       
+         
+            
+        <!--fin du classement de réputation-->
+        
+        <div class="detailReput">
+        <details class="triDetail"open>
+            <summary class="triSummary" >Exalté</summary>
+            <div id="exalte"></div>
+        </details>
+        <details class="triDetail" open>
+            <summary class="triSummary" >Révéré</summary>
+            <div id="revere"></div>
+        </details>
+        <details class="triDetail" open>
+            <summary class="triSummary">Honoré</summary>
+            <div id="honore"></div>
+        </details>
+        </div>
+         </div>
+    
+</div> <!--fin page2-->
+</div> <!--fin habillage-->
+
+{% endblock %}
+
+
+ {% block javascripts %}
+ 
+ <script src="js/personnage.js"></script>
+
+ <script src="js/page.js"></script>
+
+ 
+ {% endblock %}
